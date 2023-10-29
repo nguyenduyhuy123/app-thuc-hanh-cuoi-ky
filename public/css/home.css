@@ -1,0 +1,794 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bannertop img.img.img-fluid {
+    height: 60%;
+}
+
+.col-xs-3.col-sm-3.col-md-3.col-lg-3 {
+    padding: 0;
+}
+
+.bannertop form .form-group .form-control {
+    width: 75%;
+}
+
+.bannertop form .form-group .btn-danger {
+    width: 25%;
+}
+
+.bannertop .form .formgroup input.form-control {
+    width: 75%;
+}
+
+.bannertop form .form-group {
+    width: 100%;
+}
+
+.footer .row.duoi ul {
+    list-style: none;
+    margin-left: 15px;
+}
+
+.footer .row.duoi ul li a {
+    text-decoration: none;
+    color: #212529;
+}
+
+.footer .row.duoi ul li:hover a {
+    color: red;
+}
+
+.footer .diachi p {
+    line-height: 15px;
+    font-size: 16px;
+}
+
+.footer .row.tren {
+    padding-top: 15px;
+}
+
+.footer {
+    background-color: #ccc;
+}
+
+.noidungduoi form input.btn.btn-danger {
+    padding: 0 10px;
+}
+
+.noidungduoi form input.form-control {
+    height: 30px;
+    font-size: 12px;
+    width: 60%;
+}
+
+.noidungduoi span img {
+    width: 36px;
+    margin-right: 10px;
+    height: 36px;
+}
+
+.noidungduoi span {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.bannertop span:after {content: "0";background-color: red;color: white;position: absolute;padding: 5px 11px;border-radius: 50%;top: -20px;left: 23px;}
+
+.bannertop span {
+    position: relative;
+}
+
+.menuphai ul li i.fa.fa-caret-down {
+    color: black;
+}
+
+.menuphai ul li {
+    line-height: 50px;
+    background-color: #ccc;
+    font-weight: bold;
+    width: 100%;
+    font-size: 20px;
+    position: relative;
+    }
+
+.menuphai ul li ul {
+    list-style: none;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    opacity: 0;
+    z-index: 3;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.menuphai ul li ul li {
+    background-color: #c0ac8f;
+    border-bottom: 1px solid black;
+    padding: 0 12px;
+}
+
+.menuphai ul li ul li a {
+    color: red;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.menuphai ul li ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+.menutrai ul li .cap1 li .cap2 li:hover a   {
+    color: white;
+}
+
+.menutrai ul li .cap1 li .cap2 li:hover {
+    background-color: red;
+}
+.menuphai ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    top: 50px;
+}
+
+.menuphai ul {
+    list-style: none;
+}
+
+i.fa.fa-caret-down {
+    color: #ccc;
+    padding: 0 10px;
+}
+
+i.fa.fa-bars.iconbar {
+    font-size: 25px;
+    color: red;
+    padding: 0 10px;
+}
+
+.menutrai ul li {
+    line-height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+.menutrai ul {
+    list-style: none;
+}
+
+.menutop .menutrai, .menutop .menuphai {
+    padding: 0;
+}
+
+.menuphai {cursor: pointer;}
+
+.menutrai ul li a {
+    text-decoration: none;
+}
+
+.menutrai ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #736d6d;
+}
+
+.menutrai ul li .cap1 li a {
+    font-size: 18px;
+}
+
+.menutrai ul li .cap1 li {
+    padding: 0px 12px;
+}
+
+.menutrai ul li .cap1 li span {
+    float: right;
+}
+
+.menutrai ul li .cap1 {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    top: 100px;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+}
+
+.menutrai ul li .cap1 li {
+    width: 100%;
+    position: relative;
+    background-color: #c0ac8f;
+    border-bottom: 1px solid black;
+}
+
+.menutrai ul li .cap1 li .cap2 li {
+    background-color: #c0ac8f;
+    width: 100%;
+}
+
+.menutrai ul li .cap1 li .cap2 li a {font-size: 17px;}
+
+.menutrai ul li .cap1 li .cap2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: scale(0);
+}
+
+.menutrai ul li .cap1 li:hover .cap2 {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    transform: scale(1);
+}
+
+.mennutrai ul li {
+    position: relative;
+}
+
+.menutrai ul li:hover .cap1 {
+    transition: 0.4s;
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
+}
+
+.menutop {
+    height: 50px;
+    background-color: #ccc;
+}
+
+.bannertop .dangnhap {
+    margin: 15px 0;
+}
+
+.bannertop ul {
+    list-style: none;
+    display: flex;
+}
+
+
+.bannertop ul li:first-child {
+    width: 30%;
+}
+
+.bannertop ul li:last-child {
+    width: 60%;
+}
+
+.bannertop ul li.dangki a {
+    font-size: 15px;
+}
+
+.bannertop ul li.danngki {
+    width: 70%;
+}
+
+.bannertop ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+i.fa.fa-shopping-cart {
+    padding: 10px 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.giohang {
+    padding: 20px 0;
+}
+
+form.form-inline.form {
+    margin: 20px 0;
+}
+
+.bannertop {
+    margin-top: 10px;
+}
+@media(max-width:992px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+i.fa.fa-user-o {
+    font-size: 25px;
+}
+
+.dangnhap ul li:first-child {
+    margin-right: 15px;
+}
+
+.bannertop img.img.img-fluid {
+    height: 70%;
+}
+
+.footer h3,.footer h4 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.footer h4 {font-size: 12px;}
+
+.menuphai ul li,.menutrai ul li a {
+    font-size: 12px;
+}
+
+.menuphai ul li ul li a, .menutrai ul li .cap1 li a,.menutrai ul li .cap1 li .cap2 li a {
+    font-size: 9px;
+}
+}
+@media (max-width:576px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+.dangnhap ul li:first-child {
+    margin-right: -100px;
+    padding: 0px;
+}
+
+.dangnhap li.dangki a {
+    font-size: 22px;
+}
+
+.dangnhap li.dangki {margin-top: 14px;}
+
+i.fa.fa-user-o {
+    font-size: 40px;
+}
+
+.bannertop form .form-group {
+    display: flex;
+}
+
+.bannertop form .form-group .btn-danger {
+    width: 25%;
+}
+
+.bannertop form .form-group .form-control {
+    width: 70%;
+}
+
+.menutrai ul li a,.menuphai ul li {
+    font-size: 20px;
+}
+
+.menutop {
+    display: contents;
+}
+
+.menuphai ul li ul li {
+    width: 30%;
+}
+
+.menutop ul li .cap1 li {
+    width: 30%;
+}
+}*{
+    margin: 0;
+    padding: 0;
+}
+
+.noidungtren {
+    margin-top: 15px;
+}
+
+.bannertop img.img.img-fluid {
+    height: 55%;
+}
+
+.col-xs-3.col-sm-3.col-md-3.col-lg-3 {
+    padding: 0;
+}
+
+.bannertop form .form-group .form-control {
+    width: 75%;
+}
+
+.bannertop form .form-group .btn-danger {
+    width: 25%;
+}
+
+.bannertop .form .formgroup input.form-control {
+    width: 75%;
+}
+
+.bannertop form .form-group {
+    width: 100%;
+}
+
+.footer .row.duoi ul {
+    list-style: none;
+    margin-left: 15px;
+}
+
+.footer .row.duoi ul li a {
+    text-decoration: none;
+    color: #212529;
+}
+
+.footer .row.duoi ul li:hover a {
+    color: red;
+}
+
+.footer .diachi p {
+    line-height: 15px;
+    font-size: 16px;
+}
+
+.footer .row.tren {
+    padding-top: 15px;
+}
+
+.footer {
+    background-color: #ccc;
+}
+
+.noidungduoi form input.btn.btn-danger {
+    padding: 0 10px;
+}
+
+.noidungduoi form input.form-control {
+    height: 30px;
+    font-size: 12px;
+    width: 60%;
+}
+
+.noidungduoi span img {
+    width: 36px;
+    margin-right: 10px;
+    height: 36px;
+}
+
+.noidungduoi span {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.bannertop span:after {content: "0";background-color: red;color: white;position: absolute;padding: 5px 11px;border-radius: 50%;top: -20px;left: 23px;}
+
+.bannertop span {
+    position: relative;
+}
+
+.menuphai ul li i.fa.fa-caret-down {
+    color: black;
+}
+
+.menuphai ul li {
+    line-height: 50px;
+    background-color: #ccc;
+    font-weight: bold;
+    width: 100%;
+    font-size: 20px;
+    position: relative;
+    }
+
+.menuphai ul li ul {
+    list-style: none;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    opacity: 0;
+    z-index: 3;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.menuphai ul li ul li {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid black;
+    padding: 0 12px;
+}
+
+.menuphai ul li ul li:hover {border-bottom: 2px solid red;}
+
+.menuphai ul li ul li a {
+    color: red;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.menuphai ul li ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+.menutrai ul li .cap1 li .cap2 li:hover a   {
+    color: white;
+}
+
+.menutrai ul li .cap1 li .cap2 li:hover {
+    background-color: red;
+}
+.menuphai ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    top: 50px;
+}
+
+.menuphai ul {
+    list-style: none;
+}
+
+i.fa.fa-caret-down {
+    color: #ccc;
+    padding: 0 10px;
+}
+
+i.fa.fa-bars.iconbar {
+    font-size: 25px;
+    color: red;
+    padding: 0 10px;
+}
+
+.menutrai ul li {
+    line-height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+.menutrai ul {
+    list-style: none;
+}
+
+.menutop .menutrai, .menutop .menuphai {
+    padding: 0;
+}
+
+.menuphai {cursor: pointer;}
+
+.menutrai ul li a {
+    text-decoration: none;
+}
+
+.menutrai ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #736d6d;
+}
+
+.menutrai ul li .cap1 li a {
+    font-size: 18px;
+}
+
+.menutrai ul li .cap1 li {
+    padding: 0px 12px;
+}
+
+.menutrai ul li .cap1 li span {
+    float: right;
+}
+
+.menutrai ul li .cap1 {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    top: 100px;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+}
+
+.menutrai ul li .cap1 li {
+    width: 100%;
+    position: relative;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #000000;
+}
+
+.menutrai ul li .cap1 li .cap2 li {
+    background-color: #c0ac8f;
+    width: 100%;
+}
+
+.menutrai ul li .cap1 li .cap2 li a {font-size: 17px;}
+
+.menutrai ul li .cap1 li .cap2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: scale(0);
+}
+
+.menutrai ul li .cap1 li:hover .cap2 {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    transform: scale(1);
+}
+
+.mennutrai ul li {
+    position: relative;
+}
+
+.menutrai ul li:hover .cap1 {
+    transition: 0.4s;
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
+}
+
+.menutop {
+    height: 50px;
+    background-color: #ccc;
+}
+
+.bannertop .dangnhap {
+    margin: 15px 0;
+}
+
+.bannertop ul {
+    list-style: none;
+    display: flex;
+}
+
+i.fa.fa-user-o {
+    padding-top: 8px;
+    font-size: 33px;
+}
+
+.bannertop ul li:first-child {
+    width: 40%;
+}
+
+.bannertop ul li.danngki {
+    width: 70%;
+}
+
+.bannertop ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+i.fa.fa-shopping-cart {
+    padding: 10px 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.giohang {
+    padding: 20px 0;
+}
+
+form.form-inline.form {
+    margin: 20px 0;
+}
+
+.bannertop {
+    margin-top: 10px;
+}
+@media(max-width:992px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+.footer .diachi p {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.bannertop ul li.dangki a {
+    font-size: 10px;
+}
+}
+@media (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+.bannertop ul li.dangki a {
+    font-size: 15px;
+}
+
+i.fa.fa-user-o {
+    font-size: 33px;
+}
+
+.dangnhap ul li:first-child {
+    margin-right: 15px;
+}
+
+.bannertop img.img.img-fluid {
+    height: 70%;
+}
+
+.footer h3,.footer h4 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.footer h4 {font-size: 12px;}
+
+.menuphai ul li,.menutrai ul li a {
+    font-size: 12px;
+}
+
+.menuphai ul li ul li a, .menutrai ul li .cap1 li a,.menutrai ul li .cap1 li .cap2 li a {
+    font-size: 9px;
+}
+}
+@media (max-width:576px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+.dangnhap ul li:first-child {
+    margin-right: -100px;
+    padding: 0px;
+}
+
+.dangnhap li.dangki a {
+    font-size: 22px;
+}
+
+.dangnhap li.dangki {margin-top: 14px;}
+
+i.fa.fa-user-o {
+    font-size: 40px;
+}
+
+.bannertop form .form-group {
+    display: flex;
+}
+
+.bannertop form .form-group .btn-danger {
+    width: 25%;
+}
+
+.bannertop form .form-group .form-control {
+    width: 70%;
+}
+
+.menutrai ul li a,.menuphai ul li {
+    font-size: 20px;
+}
+
+.menutop {
+    display: contents;
+}
+
+.menuphai ul li ul li {
+    width: 30%;
+}
+
+.menutop ul li .cap1 li {
+    width: 30%;
+}
+}   

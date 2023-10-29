@@ -1,0 +1,14 @@
+.thongke{
+    margin-top: 20px;
+}
+
+table {
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+    height: auto;
+}
+
+th {
+    font-size: 25px;
+    text-align: center;
+}

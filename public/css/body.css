@@ -1,0 +1,15 @@
+.aside {
+    border-right: 2px solid red;
+    float: left;
+    width: 25%;
+    min-height: 300px;
+    margin-top: 24px;
+    margin-left: 1%;
+}
+
+.content1 {
+    float: right;
+    ;
+    width: 74%;
+    min-height: 300px;
+}

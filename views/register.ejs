@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="box" action="/register" method="POST">
+                <h2 style="color: white;">Đăng ký</h2>
+                <p class="text-muted">
+                    <% if (message.length> 0) { %>
+                        <div class="alert alert-danger">
+                            <%= message %>
+                        </div>
+                        <% } %>
+                </p>
+                <input type="text" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Mật khẩu" required>
+                <input type="text" name="name" placeholder="Họ tên" required>
+                <!-- <a class="forgot text-muted" href="#">Forgot password?</a> -->
+                <input type="submit" value="Đăng ký">
+                <br>
+                <a class="" href="/login">Bạn đã có tài khoản ?</a>
+                <br>
+                <a class="" href="/">Trang chủ</a>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+
+<div class="content1">
+    <br>
+    <form class="form-signin" action="/edit-cate/<%= data._id %>?_method=PUT" method="POST">
+        <h2>Cập nhật</h2>
+    
+        <br>
+    
+        <div class="form-group">
+            <input type="text" name="namecate" placeholder="<%- data.namecate%>" />
+        </div>
+    
+        <button class="btn  btn-warning" type="submit" style="width:15%;">Cập nhật</button>
+    </form>
+</div>
