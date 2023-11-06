@@ -76,19 +76,7 @@ router.get('/homehome', function(req, res, next) {
     }
 })
 
-/**
- * GET Home page -ok
- */ 
-router.get('', function(req, res, next) {
-    try {
-        const locals = {
-          title: "Home page"
-        }
-        res.render('index', {locals});
-    } catch (error) {
-        console.log(error);
-    }
-});
+// Khoa tai khoan
 
 router.get("/lock/:id", (req, res) => {
         userModel.findOne({ _id: req.params.id }, function(err, data) {

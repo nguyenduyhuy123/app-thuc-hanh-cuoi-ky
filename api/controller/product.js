@@ -39,6 +39,33 @@ var upload = multer({
 }).single("image");
 
 /**
+ * GET list products for Customer:
+ */
+product.get("/", async (req, res) => {
+  try {
+    const locals = {
+      title: "List products for customer",
+    };
+    const data = await Products.find();
+    console.log("123");
+    const count = await Products.countDocuments();
+    let perPage = 6;
+    let page = req.params.page || 1;
+    res.render("index", {
+      locals,
+      message: "",
+      danhsach: data,
+      current: page,
+      pages: Math.ceil(count / perPage)
+    });
+
+    
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+/**
  * GET list products -ok
  */
 product.get("/admin/list-product", async (req, res) => {
@@ -135,7 +162,7 @@ product.get("/delete-product/:id", async (req, res) => {
 });
 
 /**
- * GET EDIT PRODUCT -ok
+ * GET EDIT Product -ok
  */
 product.get("/admin/edit-product/:id", async (req, res) => {
   try {
@@ -160,44 +187,11 @@ product.get("/admin/edit-product/:id", async (req, res) => {
  * PUT EDIT Products -ok
  */
 
-// product.put("/admin/edit-product/:id", (req, res) => {
-//   upload(req, res, async function (err) {
-//     if (err instanceof multer.MulterError) {
-//       console.log(err);
-//       res.render("admin/edit_product", {
-//         message: "Không thể tải lên!!!",
-//         layout: adminLayout,
-//       });
-//     } else if (err) {
-//       res.render("admin/edit_product", {
-//         message: "Định dạng file tải lên không hỗ trợ!!!",
-//         layout: adminLayout,
-//       });
-//     } else {
-//       try {
-//         await Products.findByIdAndUpdate(req.params.id, {
-//           image: req.file.filename,
-//           name: req.body.name,
-//           cateID: req.body.cateID,
-//           note: req.body.note,
-//           price: req.body.price,
-//           updatedAt: Date.now(),
-//         });
-//         res.redirect("/admin/list-product");
-//       } catch (error) {
-//         console.log(error);
-//       }
-//     }
-//   });
-// });
-
-//
 product.put("/admin/edit-product/:id", (req, res) => {
   upload(req, res, async function (err) {
     if (!req.file) {
       try {
         await Products.findByIdAndUpdate(req.params.id, {
-          image: req.file.filename,
           name: req.body.name,
           cateID: req.body.cateID,
           note: req.body.note,
@@ -229,5 +223,7 @@ product.put("/admin/edit-product/:id", (req, res) => {
     }
   });
 });
+
+
 
 module.exports = product;

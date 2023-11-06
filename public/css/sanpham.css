@@ -1,0 +1,45 @@
+.noidung .motsanpham a .ngoisao i {
+    color: #f8c04a;
+    margin: 0px 3px;
+}
+
+.noidung .motsanpham a .gia .giakhuyenmai {
+    color: red;
+    font-weight: bold;
+}
+
+.noidung .motsanpham a {
+    text-decoration: none;
+    color: black;
+}
+
+.noidung .motsanpham a img {
+    width: 65%;
+}
+
+.noidung .motsanpham a .gia {
+    display: flex;
+}
+
+.noidung .motsanpham a .gia .gianiemyet {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.noidung .motsanpham a .gia p:last-child {
+    margin-left: 12px;
+}
+
+.noidung .motsanpham {
+    border: 1px solid #dedede;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.noidung .motsanpham {
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+}
+
+.noidung .motsanpham:after {content: "17%";position: absolute;top: 0;right: 0;background-color: #f16543;border-radius: 4px;padding: 4px 10px;font-weight: bold;color: white;}
