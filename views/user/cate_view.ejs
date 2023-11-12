@@ -1,0 +1,31 @@
+
+<div style="margin-bottom: 10px;" class="noidung">
+    <div class="container">
+        <div class="row">
+            <% danhsach.forEach(function(product){ %>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                <div class="motsanpham">
+                     <a href="../html/chitietsanpham.html">
+                         <img src="/upload/<%- product.image %>" alt="image san pham" >
+                         <div class="ngoisao text-left" style="margin-left: 10px;"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o    "></i></div>
+                         <h6 class="text-left" style="margin-left: 10px; font-weight: 400;"> <%- product.name %></h6>
+                         <div class="gia">
+                             <div class="gianiemyet">
+                                <p><%- product.price %> VNĐ </p>
+                             </div>
+                             <div class="giakhuyenmai">
+                                 <p><%- product.price %> VNĐ </p>
+                             </div>
+                         </div>
+                     </a>
+                </div>
+                <!-- end mot san pham -->
+            </div>
+            <% }); %>
+            <!-- end col mot san pham -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end noidung -->

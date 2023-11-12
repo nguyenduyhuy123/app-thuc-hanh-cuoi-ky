@@ -10,8 +10,9 @@ const Products = require('../models/products.model');
 const { json } = require('express');
 
 /**
- * GET/ Check role user
+ * GET/ Check role user: continue not done.
  */
+
 router.get('/home', function(req, res, next) {
     if (req.session.loggin) {
         user = req.user
@@ -24,21 +25,6 @@ router.get('/home', function(req, res, next) {
         user = null;
         res.redirect('/');
     }
-});
-
-router.get("/lock/:id", (req, res) => {
-        userModel.findOne({ _id: req.params.id }, function(err, data) {
-        data.lock = 1;
-        data.save();
-        res.redirect("/view_user");
-    })
-});
-router.get("/unlock/:id", (req, res) => {
-    userModel.findOne({ _id: req.params.id }, function(err, data) {
-        data.lock = 0;
-        data.save();
-        res.redirect("/view_user");
-    })
 });
 
 

@@ -47,17 +47,20 @@ product.get("/", async (req, res) => {
       title: "List products for customer",
     };
     const data = await Products.find();
+    const cate = await Cates.find();
     const count = await Products.countDocuments();
     let perPage = 6;
     let page = req.params.page || 1;
+    // console.log(data);
+
     res.render("index", {
       locals,
       message: "",
       danhsach: data,
       current: page,
+      item: cate,
       pages: Math.ceil(count / perPage)
     });
-
     
   } catch (error) {
     console.log(error);

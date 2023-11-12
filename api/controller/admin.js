@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const User = require('../models/user.model');
 
 const adminLayout = '../views/layouts/admin';
+const loginLayout = '../views/layouts/layout_login_register';
 
 const jwtSecret = process.env.JWT_SECRET;
 
@@ -39,7 +40,7 @@ router.get('/login', function(req, res, next) {
     const locals = {
       title: "Sign in"
     }
-    res.render('login', {locals, message:''});
+    res.render('login', {locals, message:'', layout: loginLayout});
   } catch (error) {
     console.log(error);
   }
@@ -55,12 +56,12 @@ router.post('/signin', async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.render('login', {message: 'Tài khoản không tồn tại.'});
+      return res.render('login', {message: 'Tài khoản không tồn tại.', layout: loginLayout});
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      return res.render('login', {message: 'Mật khẩu không chính xác.'});
+      return res.render('login', {message: 'Mật khẩu không chính xác.', layout: loginLayout});
     }
 
     const token = jwt.sign({ userId: user._id }, jwtSecret);
@@ -81,7 +82,7 @@ router.get('/register', function(req, res, next) {
     const locals = {
       title: "Sign up"
     }
-    res.render('register', {locals, message:''});
+    res.render('register', {locals, message:'', layout: loginLayout});
   } catch (error) {
     console.log(error);
   }
@@ -101,12 +102,12 @@ router.post('/register', async (req, res) => {
     
     try {
       const user = await User.create({ email, password: hashedPassword, name, role: 'user', lock:0 });
-      res.render('login', {message:'User created successfully.'});
+      res.render('login', {message:'User created successfully.', layout: loginLayout});
     } catch (error) {
       if (error.code === 11000) {
-        res.render('register', {message: "User already in use."});
+        res.render('register', {message: "User already in use.", layout: loginLayout});
       }
-      res.render('register', {message: "Internal server error."});
+      res.render('register', {message: "Internal server error.", layout: loginLayout});
     }
   } catch (error) {
     console.log(error);
