@@ -140,5 +140,46 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
   }
 });
 
+/**
+ * GET/ view_users -ok
+ */
+router.get('/admin/users', async function(req, res, next) {
+  try {
+      const locals = {
+        title: "List users",
+      };
+      const data = await User.find();
+      res.render("admin/list_user", {data, locals, layout: adminLayout});
+    } catch (error) {
+      console.log(error);
+    }
+});
+
+/**
+ * GET/ Lock user: -ok
+ */
+router.get("/lock/:id", async (req, res) => {
+  try {
+    await User.findByIdAndUpdate(req.params.id, {
+      lock: 1,
+      updatedAt: Date.now()
+    });
+    res.redirect('/admin/users');
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.get("/unlock/:id", async (req, res) => {
+  try {
+    await User.findByIdAndUpdate(req.params.id, {
+      lock: 0,
+      updatedAt: Date.now()
+    });
+    res.redirect('/admin/users');
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 module.exports = router;

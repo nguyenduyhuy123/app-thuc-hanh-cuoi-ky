@@ -47,7 +47,6 @@ product.get("/", async (req, res) => {
       title: "List products for customer",
     };
     const data = await Products.find();
-    console.log("123");
     const count = await Products.countDocuments();
     let perPage = 6;
     let page = req.params.page || 1;
