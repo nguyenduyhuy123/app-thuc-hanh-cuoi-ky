@@ -1,0 +1,16 @@
+
+<div class="content1">
+    <br>
+    <form class="form-signin" action="/edit-user/<%= data._id %>?_method=PUT" method="POST">
+        <h2>Cập nhật thông tin tài khoản</h2>
+    
+        <br>
+    
+        <div class="form-group">
+            <input type="text" name="name" placeholder="<%- data.name%>" />
+            <input type="text" name="password" placeholder="Nhập password mới!" />
+        </div>
+    
+        <button class="btn  btn-warning" type="submit" style="width:15%;">Cập nhật</button>
+    </form>
+</div>

@@ -157,6 +157,58 @@ router.get('/admin/users', async function(req, res, next) {
 });
 
 /**
+ * DELETE USER -ok
+ */
+router.delete("/delete_user/:id", async (req, res) => {
+  try {
+    await User.deleteOne({ _id: req.params.id });
+    res.redirect("/admin/users");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+/**
+ * GET EDIT USER - ok
+ */
+router.get("/edit-user/:id", async (req, res) => {
+  try {
+    const locals = {
+      title: "Edit Category",
+    };
+    const user = await User.findOne({ _id: req.params.id });
+    res.render("admin/edit_user", {
+      locals,
+      data: user,
+      layout: adminLayout,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+/**
+ * PUT EDIT USER -ok
+ */
+router.put("/edit-user/:id", async (req, res) => {
+  try {
+    const { password, name } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // console.log(hashedPassword, name);
+
+    await User.findByIdAndUpdate(req.params.id, {
+      name: name,
+      password: hashedPassword,
+      updatedAt: Date.now(),
+    });
+    res.redirect("/admin/users");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+/**
  * GET/ Lock user: -ok
  */
 router.get("/lock/:id", async (req, res) => {
